@@ -7,3 +7,13 @@ evm_version = "cancun"
 optimizer = true
 optimizer_runs = 200
 via_ir = true
+
+# Original convertible bonds retain their original compiler and EVM target.
+[profile.convertible]
+src = "legacy/convertible"
+out = "out/convertible"
+cache_path = "cache/convertible"
+solc_version = "0.8.28"
+evm_version = "shanghai"
+optimizer = false
+via_ir = false
